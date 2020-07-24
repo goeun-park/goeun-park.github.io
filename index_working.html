@@ -86,10 +86,7 @@ function bezierEvaluate(p0, p1, p2, p3, t) {
 
 <!-- BEGIN: Middle HTML -->
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
-<div style='position: absolute; bottom: 5px; left: 30px; width:100%; text-align: right; z-index: 1;'>
-        <input type="image" id="fullscreen" src="../fullscreen.png" style='position: absolute; bottom: 0px; right: 35px;'>
-        </input>
-    </div>
+
 <!-- <a-scene embedded arjs='debugUIEnabled: false; sourceType: video; sourceUrl:../../data/videos/headtracking.mp4;'> -->
     <a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam' vr-mode-ui='enabled: false'>
     <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;"></a-entity>
@@ -104,12 +101,12 @@ function bezierEvaluate(p0, p1, p2, p3, t) {
 <!-- END: Add Image Target (marker) -->
 
 <!-- BEGIN: Unity Compiled Objects -->
-<a-box src="" id="Cube_0" class="intersectable" width="2" height="4" depth="0.07" position="0 0.7 -5" rotation="0 0 0" color="#0xFFFFFF" transparent=False
+<a-box src="" id="Cube_0" class="intersectable" width="2" height="4" depth="0.1" position="0 0.501 -5" rotation="0 0 0" color="#FFAB00" transparent=False
 ></a-box>
-<a-entity position="0 0.1 0"
-scale="0.002 0.002 0.002"
-  gltf-model="JGG_top_glass.gltf"
-></a-entity>
+<a-entity id="jgg" gltf-model="JGG_top_glass.gltf"
+  position="0 0.1 0" rotation="0 0 0" scale="0.002 0.002 0.002"
+  animation="property: rotation; to: 0 360 0; loop: true; dur: 12000">
+</a-entity>
 <!-- END: Unity Compiled Objects -->
 
 <!-- BEGIN: Bottom HTML -->
